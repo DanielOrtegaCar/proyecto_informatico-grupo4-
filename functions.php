@@ -8,12 +8,12 @@ $username = "proyinf4";
 $password = "chiloteql0";
 
 
-
-
-$mysqli = new mysqli($hostname, $username, $password, $database);
-
 function ejecutarSQLCommand($commando){
  
+ $hostname = "bdd.inf.udec.cl";
+$database = "proyinf4";
+$username = "proyinf4";
+$password = "chiloteql0";
  $mysqli = new mysqli($hostname, $username, $password, $database);
 
 /* check connection */
