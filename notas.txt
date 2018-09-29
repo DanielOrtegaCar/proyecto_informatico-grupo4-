@@ -31,3 +31,9 @@ php artisan make:controller ArbitrajesController --resource
 2 amarillas son 1 roja
 actualizar ganador partido
 un equipo no puede enfrentarse a si mismo.
+
+
+
+http://localhost/service/webservice/public/usuarios
+proyecto-informatico.000webhostapp.com/public/usuarios
+proyecto-informatico.000webhostapp.com/registro.php?nombres=asdfasdfasdf%20Zapata&password=pass&correo=asdfasdfsadf%20Zapata
