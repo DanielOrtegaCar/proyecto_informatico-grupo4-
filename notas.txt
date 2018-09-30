@@ -46,6 +46,8 @@ public function register()
     });
 }
 
+https://www.000webhost.com/forum/t/wrong-com-stmt-prepare-response-size-received-7/66868/7
+
 https://databases.000webhost.com/
 id7158914_proyinf4
 asd123
