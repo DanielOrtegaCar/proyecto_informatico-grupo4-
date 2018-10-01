@@ -19,7 +19,10 @@
         <activity
             android:name=".basquet_activity"
             android:label="@string/title_activity_basquet_activity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Splash" />
+        <activity android:name=".Registro" />
+        <activity android:name=".LogIn"></activity>
     </application>
 
 </manifest>

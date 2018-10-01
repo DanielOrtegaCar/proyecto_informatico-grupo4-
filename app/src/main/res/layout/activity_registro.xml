@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fondologre"
+    tools:context=".Registro">
+
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="234dp"
+        android:layout_height="133dp"
+        android:layout_gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        app:srcCompat="@drawable/deportesudec" />
+
+    <EditText
+        android:id="@+id/etNombres"
+        android:layout_width="334dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:hint="Nombre" />
+
+    <EditText
+        android:id="@+id/etTelefono"
+        android:layout_width="334dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:hint="Telefono" />
+
+    <EditText
+        android:id="@+id/txtPass"
+        android:layout_width="334dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:hint="Contraseña"
+        android:password="true"
+        android:text=""></EditText>
+
+    <Button
+        android:id="@+id/btnGuardar"
+        android:layout_width="302dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/holo_blue_dark"
+        android:text="Guardar"
+        android:textColor="@android:color/background_light"
+        android:textStyle="bold" />
+
+
+    <Button
+        android:id="@+id/btnIngresar"
+        android:layout_width="302dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:background="@android:color/holo_blue_dark"
+        android:text="Ingresar"
+        android:textColor="@android:color/background_light"
+        android:textStyle="bold" />
+
+
+</LinearLayout>
