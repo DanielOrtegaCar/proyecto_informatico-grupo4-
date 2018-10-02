@@ -1,0 +1,53 @@
+php artisan krlove:generate:model lugares
+php artisan krlove:generate:model usuarios
+php artisan krlove:generate:model equipos
+php artisan krlove:generate:model partido_jugadors
+php artisan krlove:generate:model sanciones
+php artisan krlove:generate:model jugadores
+php artisan krlove:generate:model campeonatos
+php artisan krlove:generate:model divisiones
+php artisan krlove:generate:model deportes
+php artisan krlove:generate:model partido
+php artisan krlove:generate:model arbitros
+php artisan krlove:generate:model arbitrajes
+
+
+php artisan make:controller LugaresController --resource
+php artisan make:controller UsuariosController --resource
+php artisan make:controller EquiposController --resource
+php artisan make:controller Partido_JugadorsController --resource
+php artisan make:controller SancionesController --resource
+php artisan make:controller JugadoresController --resource
+php artisan make:controller CampeonatosController --resource
+php artisan make:controller DivisionesController --resource
+php artisan make:controller DeportesController --resource
+php artisan make:controller PartidoController --resource
+php artisan make:controller ArbitrosController --resource
+php artisan make:controller ArbitrajesController --resource
+
+# agregar los use
+#crear los metodos y agregar las rutas correspondientes
+#considerar los siguientes triggers
+2 amarillas son 1 roja
+actualizar ganador partido
+un equipo no puede enfrentarse a si mismo.
+
+https://www.000webhost.com/forum/t/deploy-laravel-project-into-000webhost-site/127323
+
+http://localhost/service/webservice/public/usuarios
+proyecto-informatico.000webhostapp.com/public/usuarios
+proyecto-informatico.000webhostapp.com/registro.php?nombres=asdfasdfasdf%20Zapata&password=pass&correo=asdfasdfsadf%20Zapata
+
+https://stackoverflow.com/questions/31758901/laravel-5-change-public-path
+public function register()
+{
+    $this->app->bind('path.public', function() {
+        return realpath(base_path().'/../public_html');
+    });
+}
+
+https://www.000webhost.com/forum/t/wrong-com-stmt-prepare-response-size-received-7/66868/7
+
+https://databases.000webhost.com/
+id7158914_proyinf4
+asd123
