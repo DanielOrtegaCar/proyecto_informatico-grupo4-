@@ -7,14 +7,14 @@ import retrofit2.Call;
 import retrofit2.http.GET;
 
 
-/**
- * Created by daortega 
+/***
+ *
+ * Daniel Ortega Carcamo
  */
-
 // http://proyecto-informatico.000webhostapp.com/usuarios
 
 public interface ApiService {
-    public static final String URL="http://proyecto-informatico.000webhostapp.com/";
+     String URL="http://proyecto-informatico.000webhostapp.com/";
 
     @GET("usuarios")
    Call<List<Usuario>>listaUsuarios();

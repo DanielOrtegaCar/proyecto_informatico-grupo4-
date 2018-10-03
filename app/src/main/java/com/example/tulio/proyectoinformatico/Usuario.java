@@ -1,5 +1,9 @@
 package com.example.tulio.proyectoinformatico;
 
+/***
+ *
+ * Daniel Ortega Carcamo
+ */
 public class Usuario {
 
 
