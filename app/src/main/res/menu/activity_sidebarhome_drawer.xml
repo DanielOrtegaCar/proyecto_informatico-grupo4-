@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_usuarios"
+            android:icon="@android:drawable/btn_star_big_on"
+            android:title="Usuarios" />
+        <item
+            android:id="@+id/nav_ayuda"
+            android:icon="@android:drawable/ic_menu_help"
+            android:title="Ayuda" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_compartir"
+                android:icon="@drawable/ic_menu_share"
+                android:title="compartir" />
+
+        </menu>
+    </item>
+
+</menu>
