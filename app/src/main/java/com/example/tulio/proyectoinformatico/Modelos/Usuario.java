@@ -1,4 +1,4 @@
-package com.example.tulio.proyectoinformatico;
+package com.example.tulio.proyectoinformatico.Modelos;
 
 /***
  *
