@@ -5,8 +5,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
+
+import com.example.tulio.proyectoinformatico.Modelos.Equipos;
+import com.example.tulio.proyectoinformatico.Modelos.Usuario;
+
 import java.util.List;
 
 import retrofit2.Call;
@@ -23,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
     ApiService apiService;
     Usuario usuario;
     List<Usuario> listaUsuarios;
+    TextView txt;
+    Equipos equipos;
 
     /*
     @Override
@@ -48,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main);
 
+            txt= (TextView) findViewById(R.id.noticias);
             cliente= new Retrofit.Builder().baseUrl(ApiService.URL).addConverterFactory(GsonConverterFactory.create()).build();
             apiService=cliente.create(ApiService.class);
             apiService.listaUsuarios().enqueue(new Callback<List<Usuario>>() {
@@ -58,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
                         listaUsuarios = response.body();
                         for (Usuario usuario:listaUsuarios){
                             Log.i("TEXTO!!!",usuario.toString());
+                            txt.setText(txt.getText()+"\n"+usuario.toString());
                         }
                     }
                 }
@@ -65,6 +73,17 @@ public class MainActivity extends AppCompatActivity {
                 public void onFailure(Call<List<Usuario>> call, Throwable t) {
                     Log.i("ERRRORRRRR!!!",t.getMessage());
 
+                }
+            });
+
+            bsqt= (ImageButton)findViewById(R.id.BotonBasquetbol);
+
+            bsqt.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent pantalla = new Intent(MainActivity.this,basquet_activity.class);
+                    startActivity(pantalla);
+                    finish();
                 }
             });
 

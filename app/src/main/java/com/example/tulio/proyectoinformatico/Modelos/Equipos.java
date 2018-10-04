@@ -1,4 +1,4 @@
-package com.example.tulio.proyectoinformatico;
+package com.example.tulio.proyectoinformatico.Modelos;
 
 /***
  *
@@ -54,4 +54,6 @@ public class Equipos {
     public void setEquipoid(int equipoid) {
         this.equipoid = equipoid;
     }
+
+    public String toString(){return this.equipoid+" "+this.nombre;}
 }
