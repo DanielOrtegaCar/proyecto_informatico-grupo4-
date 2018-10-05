@@ -29,7 +29,11 @@
             android:name=".sidebarhome"
             android:label="@string/title_activity_sidebarhome"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".mostrar_usuarios"></activity>
+        <activity android:name=".mostrar_usuarios" />
+        <activity android:name=".Prueba" />
+        <activity android:name=".fragmento">
+
+        </activity>
     </application>
 
 </manifest>

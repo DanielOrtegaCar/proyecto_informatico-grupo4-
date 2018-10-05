@@ -8,4 +8,8 @@
     tools:context=".sidebarhome"
     tools:showIn="@layout/app_bar_sidebarhome">
 
+    <include
+        layout="@layout/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </android.support.constraint.ConstraintLayout>

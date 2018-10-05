@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Layout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".fragmento">
+
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:layout_marginTop="20dp">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -86,33 +85,36 @@
                 android:text="Esta es la noticia 7 : basquetball..."
                 android:textColor="@color/letras" />
 
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="345dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:background="@color/colorbotones"
+                android:text="Esta es la noticia 8 : basquetball..."
+                android:textColor="@color/letras" />
+
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="345dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:background="@color/colorbotones"
+                android:text="Esta es la noticia 9 : basquetball..."
+                android:textColor="@color/letras" />
+
+            <Button
+                android:id="@+id/button8"
+                android:layout_width="345dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:background="@color/colorbotones"
+                android:text="Esta es la noticia 10 : basquetball..."
+                android:textColor="@color/letras" />
+
+
+
         </LinearLayout>
     </ScrollView>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_weight="5">
-
-        <ImageButton
-            android:id="@+id/BotonFutbol"
-            android:layout_width="1dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_weight="1"
-            android:background="@drawable/roundedbutton"
-            app:srcCompat="@drawable/futbol" />
-
-        <ImageButton
-            android:id="@+id/BotonBasquetbol"
-            android:layout_width="1dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_weight="1"
-            android:background="@drawable/roundedbutton"
-            app:srcCompat="@drawable/basquet" />
-
-
-    </LinearLayout>
 </LinearLayout>

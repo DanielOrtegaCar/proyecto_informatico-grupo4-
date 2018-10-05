@@ -15,7 +15,7 @@
             android:title="Ayuda" />
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="Más opciones">
         <menu>
             <item
                 android:id="@+id/nav_compartir"
