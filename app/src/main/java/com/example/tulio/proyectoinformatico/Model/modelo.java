@@ -44,7 +44,7 @@ public class modelo {
 
     @Override
     public String toString() {
-        return "Id: "+this.usuarioid+"\n"+"Nombre: "+this.nombre+"\n"+this.correo;
+        return "Nombre: "+this.nombre+"\n"+this.correo;
     }
 
 

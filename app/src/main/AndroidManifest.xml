@@ -31,9 +31,14 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".mostrar_usuarios" />
         <activity android:name=".Prueba" />
-        <activity android:name=".fragmento">
-
-        </activity>
+        <activity android:name=".fragmento" />
+        <activity
+            android:name=".home"
+            android:label="@string/title_activity_home" />
+        <activity
+            android:name=".Pestanas"
+            android:label="@string/title_activity_pestanas"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
