@@ -1,4 +1,4 @@
-package com.example.tulio.proyectoinformatico;
+package com.example.tulio.proyectoinformatico.Adaptadores;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -6,12 +6,13 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 
-import com.example.tulio.proyectoinformatico.Model.modelo;
+import com.example.tulio.proyectoinformatico.Model.fechas;
+import com.example.tulio.proyectoinformatico.R;
 
 import java.util.ArrayList;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
-    private ArrayList<modelo> mDataSet;
+    private ArrayList<fechas> mDataSet;
 
     // Obtener referencias de los componentes visuales para cada elemento
     // Es decir, referencias de los EditText, TextViews, Buttons
@@ -31,7 +32,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
     }
 
-    public void setmDataSet(ArrayList<modelo> mDataSet) {
+    public void setmDataSet(ArrayList<fechas> mDataSet) {
         this.mDataSet = mDataSet;
         notifyDataSetChanged();
     }

@@ -1,7 +1,6 @@
 package com.example.tulio.proyectoinformatico;
 
 import android.content.Intent;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -9,10 +8,10 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.LinearLayout;
 
+import com.example.tulio.proyectoinformatico.Adaptadores.MyAdapter;
 import com.example.tulio.proyectoinformatico.IO.PruebaApiAdapter;
-import com.example.tulio.proyectoinformatico.Model.modelo;
+import com.example.tulio.proyectoinformatico.Model.fechas;
 
 import java.util.ArrayList;
 
@@ -20,7 +19,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class Prueba extends AppCompatActivity implements Callback<ArrayList<modelo>> {
+public class Prueba extends AppCompatActivity implements Callback<ArrayList<fechas>> {
 
 
     private MyAdapter mAdapter;
@@ -44,7 +43,7 @@ public class Prueba extends AppCompatActivity implements Callback<ArrayList<mode
         prueba.setAdapter(mAdapter);
 
 
-        Call<ArrayList<modelo>> call = PruebaApiAdapter.getApiService().getPrueba();
+        Call<ArrayList<fechas>> call = PruebaApiAdapter.getApiService().getPrueba();
         call.enqueue(this);
 
 
@@ -59,10 +58,10 @@ public class Prueba extends AppCompatActivity implements Callback<ArrayList<mode
     }
 
     @Override
-    public void onResponse(Call<ArrayList<modelo>> call, Response<ArrayList<modelo>> response) {
+    public void onResponse(Call<ArrayList<fechas>> call, Response<ArrayList<fechas>> response) {
         if(response.isSuccessful()){
 
-            ArrayList<modelo> respuesta = response.body();
+            ArrayList<fechas> respuesta = response.body();
             Log.d("Respuesta de bd", "tamaño del arreglo =>" + respuesta.size());
             mAdapter.setmDataSet(respuesta);
 
@@ -70,7 +69,7 @@ public class Prueba extends AppCompatActivity implements Callback<ArrayList<mode
     }
 
     @Override
-    public void onFailure(Call<ArrayList<modelo>> call, Throwable t) {
+    public void onFailure(Call<ArrayList<fechas>> call, Throwable t) {
         Log.i("ERRRORRRRR!!!",t.getMessage());
 
     }
