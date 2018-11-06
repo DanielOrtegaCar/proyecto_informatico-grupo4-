@@ -17,4 +17,7 @@ public class Tab_Noticias extends Fragment {
     }
 
 
+
+
+
 }

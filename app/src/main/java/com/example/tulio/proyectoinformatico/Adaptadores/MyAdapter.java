@@ -28,7 +28,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     // Este es nuestro constructor (puede variar según lo que queremos mostrar)
     public MyAdapter() {
 
-        mDataSet = new ArrayList<>();
+        mDataSet = new ArrayList<fechas>();
 
     }
 

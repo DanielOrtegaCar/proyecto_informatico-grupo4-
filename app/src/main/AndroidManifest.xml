@@ -17,13 +17,12 @@
             android:label="@string/title_activity_basquet_activity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Splash">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-    </activity>
-
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".Registro" />
         <activity android:name=".LogIn" />
         <activity
@@ -32,7 +31,6 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".mostrar_usuarios" />
         <activity android:name=".Prueba" />
-
         <activity
             android:name=".home"
             android:label="@string/title_activity_home" />
@@ -43,11 +41,8 @@
         <activity
             android:name=".pestanas_inicio"
             android:label="@string/title_activity_pestanas_inicio"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-
-
-
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".Algo"></activity>
     </application>
 
 </manifest>

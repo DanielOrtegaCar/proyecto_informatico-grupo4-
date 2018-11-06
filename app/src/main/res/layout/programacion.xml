@@ -6,6 +6,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragmentos.Tab_Programacion">
 
+
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/pruebabd"
         android:layout_width="262dp"

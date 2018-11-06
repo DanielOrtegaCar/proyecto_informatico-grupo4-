@@ -27,7 +27,7 @@ public class Splash extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent homeIntent= new Intent(Splash.this, pestanas_inicio.class);
+                Intent homeIntent= new Intent(Splash.this, home.class);
                 startActivity(homeIntent);
                 finish();
             }
