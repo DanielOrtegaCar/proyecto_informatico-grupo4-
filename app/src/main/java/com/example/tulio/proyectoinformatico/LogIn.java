@@ -84,7 +84,7 @@ public class LogIn extends AppCompatActivity {
                 // Intent pantalla = new Intent(MainActivity.this,Registro.class);
 
 
-                Intent pantalla = new Intent(LogIn.this, MainActivity.class);
+                Intent pantalla = new Intent(LogIn.this, home.class);
 
                 startActivity(pantalla);
                 finish();
