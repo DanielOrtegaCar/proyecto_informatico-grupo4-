@@ -56,7 +56,7 @@ public class Registro extends AppCompatActivity {
                 // Intent pantalla = new Intent(MainActivity.this,Registro.class);
 
 
-                Intent pantalla = new Intent(Registro.this, sidebarhome.class);
+                Intent pantalla = new Intent(Registro.this, home.class);
                 startActivity(pantalla);
                 finish();
 

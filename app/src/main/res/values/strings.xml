@@ -19,4 +19,7 @@
     <string name="tab_text_1">Noticias</string>
     <string name="tab_text_2">Programacion</string>
     <string name="tab_text_3">Suscritos</string>
+    <string name="tab_text_4">Estadisticas</string>
+    <string name="tab_text_5">Tabla</string>
+    <string name="tab_text_6">Reglamento</string>
 </resources>

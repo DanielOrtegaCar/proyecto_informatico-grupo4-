@@ -2,6 +2,7 @@ package com.example.tulio.proyectoinformatico.IO;
 
 
 
+import com.example.tulio.proyectoinformatico.Model.Usuario;
 import com.example.tulio.proyectoinformatico.Model.fechas;
 import com.example.tulio.proyectoinformatico.Model.modelo;
 
@@ -14,6 +15,9 @@ public interface PruebaApiService {
 
     @GET("futbol")
     Call<ArrayList<fechas>> getPrueba();
+
+    @GET("usuarios")
+    Call<ArrayList<Usuario>> getUsuario();
 
 
 }
