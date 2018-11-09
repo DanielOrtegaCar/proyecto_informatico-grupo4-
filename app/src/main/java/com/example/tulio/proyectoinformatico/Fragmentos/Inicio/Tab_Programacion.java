@@ -13,8 +13,7 @@ import android.widget.LinearLayout;
 import android.content.Context;
 import android.net.Uri;
 import android.widget.ProgressBar;
-
-import com.example.tulio.proyectoinformatico.IO.PruebaApiAdapter;
+//import com.example.tulio.proyectoinformatico.IO.PruebaApiAdapter;
 import com.example.tulio.proyectoinformatico.Model.fechas;
 import com.example.tulio.proyectoinformatico.Adaptadores.MyAdapter;
 import com.example.tulio.proyectoinformatico.R;
@@ -50,8 +49,8 @@ public class Tab_Programacion extends Fragment implements Callback<ArrayList<fec
             mAdapter = new MyAdapter();
             prueba.setAdapter(mAdapter);
 
-            Call<ArrayList<fechas>> call = PruebaApiAdapter.getApiService().getPrueba();
-            call.enqueue( this);
+            //Call<ArrayList<fechas>> call = PruebaApiAdapter.getApiService().getPrueba();
+  //          call.enqueue( this);
 /*
             runnable= new Runnable() {
                 @Override

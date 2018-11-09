@@ -11,13 +11,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" />
-
-        <activity
-            android:name=".basquet_activity"
-            android:label="@string/title_activity_basquet_activity"
-            android:theme="@style/AppTheme.NoActionBar" />
-
         <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,9 +19,17 @@
             </intent-filter>
         </activity>
         <activity android:name=".Registro" />
-        <activity android:name=".LogIn">
+        <activity android:name=".LogIn" />
+        <activity
+            android:name=".home"
+            android:label="@string/title_activity_home" />
+        <activity
+            android:name=".Fragmentos.Inicio.pestanas_inicio"
+            android:label="@string/title_activity_pestanas_inicio"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Algo" />
 
-        </activity>
+
     </application>
 
 </manifest>
