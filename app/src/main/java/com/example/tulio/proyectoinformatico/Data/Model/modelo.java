@@ -1,18 +1,13 @@
-package com.example.tulio.proyectoinformatico.Modelos;
+package com.example.tulio.proyectoinformatico.Data.Model;
 
-/***
- *
- * Daniel Ortega Carcamo
- */
-public class Usuario {
-
+public class modelo {
 
     private String password;
     private String correo;
     private String nombre;
     private int usuarioid;
 
-    public Usuario() {
+    public modelo() {
     }
 
     public String getPassword() {
@@ -49,6 +44,8 @@ public class Usuario {
 
     @Override
     public String toString() {
-        return this.usuarioid+" "+this.nombre;
+        return "Nombre: "+this.nombre+"\n"+this.correo;
     }
+
+
 }

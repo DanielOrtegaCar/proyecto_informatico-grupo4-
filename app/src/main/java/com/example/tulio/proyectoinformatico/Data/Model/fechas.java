@@ -1,4 +1,4 @@
-package com.example.tulio.proyectoinformatico.Model;
+package com.example.tulio.proyectoinformatico.Data.Model;
 
 public abstract class fechas {
 

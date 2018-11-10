@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 
-import com.example.tulio.proyectoinformatico.Model.fechas;
+import com.example.tulio.proyectoinformatico.Data.Model.fechas;
 import com.example.tulio.proyectoinformatico.R;
 
 import java.util.ArrayList;
