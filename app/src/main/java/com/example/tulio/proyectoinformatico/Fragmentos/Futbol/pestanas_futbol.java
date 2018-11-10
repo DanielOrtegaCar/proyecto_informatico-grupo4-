@@ -8,7 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.tulio.proyectoinformatico.Adaptadores.TabViewPagerAdapter;
+import com.example.tulio.proyectoinformatico.Data.Adaptadores.TabViewPagerAdapter;
 
 import com.example.tulio.proyectoinformatico.R;
 

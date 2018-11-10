@@ -28,14 +28,18 @@ public class home extends AppCompatActivity {
 
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+
+
         //mTextMessage = (TextView) findViewById(R.id.message);
         navigation = (BottomNavigationView) findViewById(R.id.navigation);
         //navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
         frameLayout= (FrameLayout) findViewById(R.id.cont_layout);
         home= new pestanas_inicio();
         futbol= new pestanas_futbol();
@@ -44,6 +48,8 @@ public class home extends AppCompatActivity {
 
 
 
+
+        // barra de navegacion, inferior
         mOnNavigationItemSelectedListener= new BottomNavigationView.OnNavigationItemSelectedListener() {
 
             @Override
