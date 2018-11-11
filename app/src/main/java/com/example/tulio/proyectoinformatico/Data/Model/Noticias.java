@@ -7,9 +7,9 @@ public class Noticias {
     private Integer id;
     private String deporteid;
     private String texto;
-    private Object deletedAt;
-    private Object createdAt;
-    private Object updatedAt;
+    private String deletedAt;
+    private String createdAt;
+    private String updatedAt;
     private String titulo;
 
     /**
@@ -29,7 +29,7 @@ public class Noticias {
      * @param deletedAt
      * @param deporteid
      */
-    public Noticias(Integer id, String deporteid, String texto, Object deletedAt, Object createdAt, Object updatedAt, String titulo) {
+    public Noticias(Integer id, String deporteid, String texto, String deletedAt, String createdAt, String updatedAt, String titulo) {
         super();
         this.id = id;
         this.deporteid = deporteid;
@@ -64,27 +64,27 @@ public class Noticias {
         this.texto = texto;
     }
 
-    public Object getDeletedAt() {
+    public String getDeletedAt() {
         return deletedAt;
     }
 
-    public void setDeletedAt(Object deletedAt) {
+    public void setDeletedAt(String deletedAt) {
         this.deletedAt = deletedAt;
     }
 
-    public Object getCreatedAt() {
+    public String getCreatedAt() {
         return createdAt;
     }
 
-    public void setCreatedAt(Object createdAt) {
+    public void setCreatedAt(String createdAt) {
         this.createdAt = createdAt;
     }
 
-    public Object getUpdatedAt() {
+    public String getUpdatedAt() {
         return updatedAt;
     }
 
-    public void setUpdatedAt(Object updatedAt) {
+    public void setUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
     }
 

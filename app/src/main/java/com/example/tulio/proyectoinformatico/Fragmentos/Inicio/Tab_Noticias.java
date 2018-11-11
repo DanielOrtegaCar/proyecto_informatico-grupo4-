@@ -1,13 +1,10 @@
 package com.example.tulio.proyectoinformatico.Fragmentos.Inicio;
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import com.example.tulio.proyectoinformatico.R;
 
@@ -19,10 +16,7 @@ public class Tab_Noticias extends Fragment {
         View rootView= inflater.inflate(R.layout.noticias, container, false);
         return rootView;
 
-
-        recyclerView = recyclerView.findViewById(R.id.recyclerView);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        
     }
 
 

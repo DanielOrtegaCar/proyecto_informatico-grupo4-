@@ -2,6 +2,8 @@
 package com.example.tulio.proyectoinformatico.Data.Model;
 
 
+import com.google.gson.annotations.SerializedName;
+
 public class FechaPartido {
 
     private String deporteid;
@@ -13,7 +15,9 @@ public class FechaPartido {
     private String fechaInicio;
     private String fechaTermino;
     private String lugarid;
+    @SerializedName("equipo_1")
     private String equipo1;
+    @SerializedName("equipo_2")
     private String equipo2;
     private String fecha;
     private String hora;
