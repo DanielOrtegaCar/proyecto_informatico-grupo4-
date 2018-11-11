@@ -1,4 +1,3 @@
-
 package com.example.tulio.proyectoinformatico.Data.Model;
 
 
@@ -8,33 +7,39 @@ public class TablaEquipo {
     private String id;
     private String equipo;
     private String pj;
+    private String pg;
+    private String pp;
     private String gf;
     private String gc;
     private String difgoles;
 
     /**
      * No args constructor for use in serialization
-     * 
+     *
      */
     public TablaEquipo() {
     }
 
     /**
-     * 
+     *
      * @param equipo
      * @param id
      * @param nombre
+     * @param pg
      * @param difgoles
      * @param gc
      * @param gf
+     * @param pp
      * @param pj
      */
-    public TablaEquipo(String nombre, String id, String equipo, String pj, String gf, String gc, String difgoles) {
+    public TablaEquipo(String nombre, String id, String equipo, String pj, String pg, String pp, String gf, String gc, String difgoles) {
         super();
         this.nombre = nombre;
         this.id = id;
         this.equipo = equipo;
         this.pj = pj;
+        this.pg = pg;
+        this.pp = pp;
         this.gf = gf;
         this.gc = gc;
         this.difgoles = difgoles;
@@ -70,6 +75,22 @@ public class TablaEquipo {
 
     public void setPj(String pj) {
         this.pj = pj;
+    }
+
+    public String getPg() {
+        return pg;
+    }
+
+    public void setPg(String pg) {
+        this.pg = pg;
+    }
+
+    public String getPp() {
+        return pp;
+    }
+
+    public void setPp(String pp) {
+        this.pp = pp;
     }
 
     public String getGf() {
