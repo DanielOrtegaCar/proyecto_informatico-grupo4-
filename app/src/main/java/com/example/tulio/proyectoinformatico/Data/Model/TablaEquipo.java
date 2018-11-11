@@ -4,15 +4,13 @@ package com.example.tulio.proyectoinformatico.Data.Model;
 
 public class TablaEquipo {
 
-    private String divisionid;
+    private String nombre;
     private String id;
     private String equipo;
-    private String pJ;
-    private String pG;
-    private String pP;
-    private String gF;
-    private String gC;
-    private String dIFGOLES;
+    private String pj;
+    private String gf;
+    private String gc;
+    private String difgoles;
 
     /**
      * No args constructor for use in serialization
@@ -25,33 +23,29 @@ public class TablaEquipo {
      * 
      * @param equipo
      * @param id
-     * @param pG
-     * @param pP
-     * @param dIFGOLES
-     * @param pJ
-     * @param gF
-     * @param gC
-     * @param divisionid
+     * @param nombre
+     * @param difgoles
+     * @param gc
+     * @param gf
+     * @param pj
      */
-    public TablaEquipo(String divisionid, String id, String equipo, String pJ, String pG, String pP, String gF, String gC, String dIFGOLES) {
+    public TablaEquipo(String nombre, String id, String equipo, String pj, String gf, String gc, String difgoles) {
         super();
-        this.divisionid = divisionid;
+        this.nombre = nombre;
         this.id = id;
         this.equipo = equipo;
-        this.pJ = pJ;
-        this.pG = pG;
-        this.pP = pP;
-        this.gF = gF;
-        this.gC = gC;
-        this.dIFGOLES = dIFGOLES;
+        this.pj = pj;
+        this.gf = gf;
+        this.gc = gc;
+        this.difgoles = difgoles;
     }
 
-    public String getDivisionid() {
-        return divisionid;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setDivisionid(String divisionid) {
-        this.divisionid = divisionid;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public String getId() {
@@ -70,52 +64,36 @@ public class TablaEquipo {
         this.equipo = equipo;
     }
 
-    public String getPJ() {
-        return pJ;
+    public String getPj() {
+        return pj;
     }
 
-    public void setPJ(String pJ) {
-        this.pJ = pJ;
+    public void setPj(String pj) {
+        this.pj = pj;
     }
 
-    public String getPG() {
-        return pG;
+    public String getGf() {
+        return gf;
     }
 
-    public void setPG(String pG) {
-        this.pG = pG;
+    public void setGf(String gf) {
+        this.gf = gf;
     }
 
-    public String getPP() {
-        return pP;
+    public String getGc() {
+        return gc;
     }
 
-    public void setPP(String pP) {
-        this.pP = pP;
+    public void setGc(String gc) {
+        this.gc = gc;
     }
 
-    public String getGF() {
-        return gF;
+    public String getDifgoles() {
+        return difgoles;
     }
 
-    public void setGF(String gF) {
-        this.gF = gF;
-    }
-
-    public String getGC() {
-        return gC;
-    }
-
-    public void setGC(String gC) {
-        this.gC = gC;
-    }
-
-    public String getDIFGOLES() {
-        return dIFGOLES;
-    }
-
-    public void setDIFGOLES(String dIFGOLES) {
-        this.dIFGOLES = dIFGOLES;
+    public void setDifgoles(String difgoles) {
+        this.difgoles = difgoles;
     }
 
 }
