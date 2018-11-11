@@ -33,7 +33,7 @@ public class Tab_Estadisticas_Futbol extends Fragment {
         mRecyclerView.setLayoutManager(mLayoutManager);
 
         RestClient client = RetrofitUtils.getInstance().create(RestClient.class);
-        Call<List<TablaGoleador>> call = client.getTabla_goleador(1); // cambiar List<Equipos> acomoodar con modelo que quiero llamar
+        Call<List<TablaGoleador>> call = client.getTabla_goleador(2); // cambiar List<Equipos> acomoodar con modelo que quiero llamar
         call.enqueue(new Callback<List<TablaGoleador>>() {
             @Override
             public void onResponse(Call<List<TablaGoleador>> call, Response<List<TablaGoleador>> response) {
