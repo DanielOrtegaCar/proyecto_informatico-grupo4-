@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import com.example.tulio.proyectoinformatico.Data.Api.RestClient;
 import com.example.tulio.proyectoinformatico.Data.Api.RetrofitUtils;
-import com.example.tulio.proyectoinformatico.Data.Model.TablaPosicione;
+import com.example.tulio.proyectoinformatico.Data.Model.TablaEquipo;
 import com.example.tulio.proyectoinformatico.R;
 
 import java.util.List;
@@ -38,18 +38,18 @@ public class Tab_Tabla_Futbol extends Fragment {
 
 
         RestClient client = RetrofitUtils.getInstance().create(RestClient.class);
-        Call<List<TablaPosicione>> call = client.getTabla_equipos(1); // cambiar List<Equipos> acomoodar con modelo que quiero llamar
-        call.enqueue(new Callback<List<TablaPosicione>>() {
+        Call<List<TablaEquipo>> call = client.getTabla_equipos(1); // cambiar List<Equipos> acomoodar con modelo que quiero llamar
+        call.enqueue(new Callback<List<TablaEquipo>>() {
             @Override
-            public void onResponse(Call<List<TablaPosicione>> call, Response<List<TablaPosicione>> response) {
-                TablaPosicione[] tabla = new TablaPosicione[response.body().size()];
+            public void onResponse(Call<List<TablaEquipo>> call, Response<List<TablaEquipo>> response) {
+                TablaEquipo[] tabla = new TablaEquipo[response.body().size()];
                 mAdapter = new AdapterPosiciones(response.body().toArray(tabla));
                 mRecyclerView.setAdapter(mAdapter);
 
             }
 
             @Override
-            public void onFailure(Call<List<TablaPosicione>> call, Throwable t) {
+            public void onFailure(Call<List<TablaEquipo>> call, Throwable t) {
 
             }
         });
@@ -59,7 +59,7 @@ public class Tab_Tabla_Futbol extends Fragment {
 }
 
 class AdapterPosiciones extends RecyclerView.Adapter<AdapterPosiciones.ElementoTabla> {
-        private TablaPosicione[] mDataset;
+        private TablaEquipo[] mDataset;
 
         // Provide a reference to the views for each data item
         // Complex data items may need more than one view per item, and
@@ -82,7 +82,7 @@ class AdapterPosiciones extends RecyclerView.Adapter<AdapterPosiciones.ElementoT
         }
 
         // Provide a suitable constructor (depends on the kind of dataset)
-    public AdapterPosiciones(TablaPosicione[] myDataset) {
+    public AdapterPosiciones(TablaEquipo[] myDataset) {
             mDataset = myDataset;
         }
 
@@ -106,12 +106,12 @@ class AdapterPosiciones extends RecyclerView.Adapter<AdapterPosiciones.ElementoT
             // - get element from your dataset at this position
             // - replace the contents of the view with that element
             holder.equipo.setText(mDataset[position].getEquipo());
-            holder.pP.setText(mDataset[position].getPP());
-            holder.pG.setText(mDataset[position].getPG());
-            holder.pJ.setText(mDataset[position].getPJ());
-            holder.gC.setText(mDataset[position].getGC());
-            holder.gF.setText(mDataset[position].getGF());
-            holder.diff.setText(mDataset[position].getDIFGOLES());
+            holder.pP.setText(mDataset[position].getPp());
+            holder.pG.setText(mDataset[position].getPg());
+            holder.pJ.setText(mDataset[position].getPj());
+            holder.gC.setText(mDataset[position].getGc());
+            holder.gF.setText(mDataset[position].getGf());
+            holder.diff.setText(mDataset[position].getDifgoles());
 
 
         }
