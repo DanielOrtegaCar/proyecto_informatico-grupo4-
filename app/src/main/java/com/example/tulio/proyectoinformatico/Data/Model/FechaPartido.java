@@ -10,11 +10,6 @@ public class FechaPartido {
     private String id;
     private String division;
     private String campeonato;
-    private String ano;
-    private String semestre;
-    private String fechaInicio;
-    private String fechaTermino;
-    private String lugarid;
     @SerializedName("equipo_1")
     private String equipo1;
     @SerializedName("equipo_2")
@@ -23,6 +18,7 @@ public class FechaPartido {
     private String hora;
     private String ganador;
     private String empate;
+    private String lugarId;
 
     /**
      * No args constructor for use in serialization
@@ -33,39 +29,31 @@ public class FechaPartido {
 
     /**
      * 
-     * @param fecha
-     * @param ganador
-     * @param semestre
-     * @param deporteid
-     * @param fechaTermino
      * @param id
-     * @param lugarid
      * @param hora
      * @param empate
      * @param division
+     * @param fecha
+     * @param ganador
      * @param campeonato
-     * @param ano
+     * @param lugarId
      * @param equipo1
+     * @param deporteid
      * @param equipo2
-     * @param fechaInicio
      */
-    public FechaPartido(String deporteid, String id, String division, String campeonato, String ano, String semestre, String fechaInicio, String fechaTermino, String lugarid, String equipo1, String equipo2, String fecha, String hora, String ganador, String empate) {
+    public FechaPartido(String deporteid, String id, String division, String campeonato, String equipo1, String equipo2, String fecha, String hora, String ganador, String empate, String lugarId) {
         super();
         this.deporteid = deporteid;
         this.id = id;
         this.division = division;
         this.campeonato = campeonato;
-        this.ano = ano;
-        this.semestre = semestre;
-        this.fechaInicio = fechaInicio;
-        this.fechaTermino = fechaTermino;
-        this.lugarid = lugarid;
         this.equipo1 = equipo1;
         this.equipo2 = equipo2;
         this.fecha = fecha;
         this.hora = hora;
         this.ganador = ganador;
         this.empate = empate;
+        this.lugarId = lugarId;
     }
 
     public String getDeporteid() {
@@ -98,46 +86,6 @@ public class FechaPartido {
 
     public void setCampeonato(String campeonato) {
         this.campeonato = campeonato;
-    }
-
-    public String getAno() {
-        return ano;
-    }
-
-    public void setAno(String ano) {
-        this.ano = ano;
-    }
-
-    public String getSemestre() {
-        return semestre;
-    }
-
-    public void setSemestre(String semestre) {
-        this.semestre = semestre;
-    }
-
-    public String getFechaInicio() {
-        return fechaInicio;
-    }
-
-    public void setFechaInicio(String fechaInicio) {
-        this.fechaInicio = fechaInicio;
-    }
-
-    public String getFechaTermino() {
-        return fechaTermino;
-    }
-
-    public void setFechaTermino(String fechaTermino) {
-        this.fechaTermino = fechaTermino;
-    }
-
-    public String getLugarid() {
-        return lugarid;
-    }
-
-    public void setLugarid(String lugarid) {
-        this.lugarid = lugarid;
     }
 
     public String getEquipo1() {
@@ -186,6 +134,14 @@ public class FechaPartido {
 
     public void setEmpate(String empate) {
         this.empate = empate;
+    }
+
+    public String getLugarId() {
+        return lugarId;
+    }
+
+    public void setLugarId(String lugarId) {
+        this.lugarId = lugarId;
     }
 
 }

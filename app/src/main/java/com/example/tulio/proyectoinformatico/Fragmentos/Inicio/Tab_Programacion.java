@@ -104,7 +104,7 @@ class AdapterPartidos extends RecyclerView.Adapter<AdapterPartidos.ElementoTabla
         holder.equipo2.setText(mDataset[position].getEquipo2());
         holder.fecha.setText(mDataset[position].getFecha());
         holder.hora.setText(mDataset[position].getHora());
-        holder.lugar.setText(mDataset[position].getLugarid());
+        holder.lugar.setText(mDataset[position].getLugarId());
 
 
     }
