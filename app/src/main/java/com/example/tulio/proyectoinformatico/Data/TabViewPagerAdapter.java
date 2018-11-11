@@ -1,4 +1,4 @@
-package com.example.tulio.proyectoinformatico.Data.Adaptadores;
+package com.example.tulio.proyectoinformatico.Data;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
