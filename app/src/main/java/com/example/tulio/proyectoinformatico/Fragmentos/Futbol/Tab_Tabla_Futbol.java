@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,11 +11,13 @@ import android.widget.TextView;
 
 import com.example.tulio.proyectoinformatico.Data.Api.RestClient;
 import com.example.tulio.proyectoinformatico.Data.Api.RetrofitUtils;
-import com.example.tulio.proyectoinformatico.Data.Model.Equipos;
+import com.example.tulio.proyectoinformatico.Data.Model.TablaPosicione;
 import com.example.tulio.proyectoinformatico.R;
 
 import java.util.List;
 import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class Tab_Tabla_Futbol extends Fragment {
     //generico
@@ -30,28 +31,25 @@ public class Tab_Tabla_Futbol extends Fragment {
         View rootView = inflater.inflate(R.layout.futbol_tabla, container, false); // R.layout. completo del fragment, distinto al elemento que quiero acceder
 
             //copiar
-        mRecyclerView = rootView.findViewById(R.id.lista); // cambiar id reciccler view R.id.lista
+        mRecyclerView = rootView.findViewById(R.id.lista_puntuacion); // cambiar id reciccler view R.id.lista
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(this.getContext());
         mRecyclerView.setLayoutManager(mLayoutManager);
 
 
         RestClient client = RetrofitUtils.getInstance().create(RestClient.class);
-        Call<List<Equipos>> call = client.getData(); // cambiar List<Equipos> acomoodar con modelo que quiero llamar
-        call.enqueue(new retrofit2.Callback<List<Equipos>>() { // List<Equipos>
+        Call<List<TablaPosicione>> call = client.getTabla_equipos(1); // cambiar List<Equipos> acomoodar con modelo que quiero llamar
+        call.enqueue(new Callback<List<TablaPosicione>>() {
             @Override
-            public void onResponse(Call<List<Equipos>> call, retrofit2.Response<List<Equipos>> response) {
-                /* cambios solo tipo de modelo */
-                Equipos[] equipos = new Equipos[response.body().size()];
-                mAdapter = new AdapterTablaFutbole(response.body().toArray(equipos));
+            public void onResponse(Call<List<TablaPosicione>> call, Response<List<TablaPosicione>> response) {
+                TablaPosicione[] tabla = new TablaPosicione[response.body().size()];
+                mAdapter = new AdapterPosiciones(response.body().toArray(tabla));
                 mRecyclerView.setAdapter(mAdapter);
-                Log.d("RESPUESTA", "entro");
 
             }
 
             @Override
-            public void onFailure(Call<List<Equipos>> call, Throwable t) {
-                Log.e("ERROR", t.toString());
+            public void onFailure(Call<List<TablaPosicione>> call, Throwable t) {
 
             }
         });
@@ -60,37 +58,42 @@ public class Tab_Tabla_Futbol extends Fragment {
     }
 }
 
-class AdapterTablaFutbole extends RecyclerView.Adapter<AdapterTablaFutbole.ElementoTabla> {
-        private Equipos[] mDataset;
+class AdapterPosiciones extends RecyclerView.Adapter<AdapterPosiciones.ElementoTabla> {
+        private TablaPosicione[] mDataset;
 
         // Provide a reference to the views for each data item
         // Complex data items may need more than one view per item, and
         // you provide access to all the views for a data item in a view holder
         public static class ElementoTabla extends RecyclerView.ViewHolder {
             // each data item is just a string in this case
-            public TextView nombre, facultad, carrera; //para el layout de un elemento
+
+            public TextView equipo, pJ, pG, pP, gF, gC, diff; //para el layout de un elemento
             public ElementoTabla(View v) {
                 super(v);
-                nombre = v.findViewById(R.id.nombre);
-                facultad = v.findViewById(R.id.facultad);
-                carrera = v.findViewById(R.id.carrera);
+                equipo = v.findViewById(R.id.Equipo);
+                pJ = v.findViewById(R.id.PJ);
+                pG = v.findViewById(R.id.PG);
+                pP = v.findViewById(R.id.PP);
+                gF = v.findViewById(R.id.GF);
+                gC = v.findViewById(R.id.GC);
+                diff= v.findViewById(R.id.Diff);
 
             }
         }
 
         // Provide a suitable constructor (depends on the kind of dataset)
-    public AdapterTablaFutbole(Equipos[] myDataset) {
+    public AdapterPosiciones(TablaPosicione[] myDataset) {
             mDataset = myDataset;
         }
 
         // Create new views (invoked by the layout manager)
         @Override
         // crea la vista
-        public AdapterTablaFutbole.ElementoTabla onCreateViewHolder(ViewGroup parent,
+        public AdapterPosiciones.ElementoTabla onCreateViewHolder(ViewGroup parent,
         int viewType) {
             // create a new view
             View v = LayoutInflater.from(parent.getContext())
-                    .inflate(R.layout.listar_equipos, parent, false);
+                    .inflate(R.layout.tabla_puntuacion_row, parent, false);
 
             ElementoTabla vh = new ElementoTabla(v);
             return vh;
@@ -102,9 +105,14 @@ class AdapterTablaFutbole extends RecyclerView.Adapter<AdapterTablaFutbole.Eleme
         public void onBindViewHolder(ElementoTabla holder, int position) {
             // - get element from your dataset at this position
             // - replace the contents of the view with that element
-           holder.nombre.setText(mDataset[position].getNombre());
-           holder.carrera.setText(mDataset[position].getCarrera());
-           holder.facultad.setText(mDataset[position].getFacultad());
+            holder.equipo.setText(mDataset[position].getEquipo());
+            holder.pP.setText(mDataset[position].getPP());
+            holder.pG.setText(mDataset[position].getPG());
+            holder.pJ.setText(mDataset[position].getPJ());
+            holder.gC.setText(mDataset[position].getGC());
+            holder.gF.setText(mDataset[position].getGF());
+            holder.diff.setText(mDataset[position].getDIFGOLES());
+
 
         }
 

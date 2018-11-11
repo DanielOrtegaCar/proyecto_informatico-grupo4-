@@ -5,6 +5,7 @@ import com.example.tulio.proyectoinformatico.Data.Model.FechaPartido;
 import com.example.tulio.proyectoinformatico.Data.Model.Reglamento;
 import com.example.tulio.proyectoinformatico.Data.Model.TablaEquipo;
 import com.example.tulio.proyectoinformatico.Data.Model.TablaGoleador;
+import com.example.tulio.proyectoinformatico.Data.Model.TablaPosicione;
 import com.example.tulio.proyectoinformatico.Data.Model.TablaSancione;
 
 import java.util.List;
@@ -29,7 +30,7 @@ public interface RestClient {
     Call<List<TablaGoleador>> getTabla_goleador(@retrofit2.http.Path("id") int id);
 
     @GET("/tabla_equipos/{id}")
-    Call<List<TablaEquipo>> getTabla_equipos(@retrofit2.http.Path("id") int id);
+    Call<List<TablaPosicione>> getTabla_equipos(@retrofit2.http.Path("id") int id);
 
     @GET("/tabla_sanciones/{id}")
     Call<List<TablaSancione>> getTabla_sanciones(@retrofit2.http.Path("id") int id);
