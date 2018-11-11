@@ -68,6 +68,9 @@ class AdapterReglamento extends RecyclerView.Adapter<AdapterReglamento.ElementoT
         public ElementoTabla(View v) {
             super(v);
             nombre = v.findViewById(R.id.nombre);
+
+
+
             link = v.findViewById(R.id.link);
         }
     }
