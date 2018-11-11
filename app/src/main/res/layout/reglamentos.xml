@@ -4,12 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Fragmentos.Inicio.Tab_Programacion">
+    tools:context=".Fragmentos.Futbol.Tab_Reglamento_Futbol">
 
 
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/lista_partido"
+        android:id="@+id/lista-reglamento"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
