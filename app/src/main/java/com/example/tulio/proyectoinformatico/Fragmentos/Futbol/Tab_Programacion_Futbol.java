@@ -74,8 +74,6 @@ class AdapterPartidos extends RecyclerView.Adapter<AdapterPartidos.ElementoTabla
             fecha = v.findViewById(R.id.fecha);
             hora = v.findViewById(R.id.hora);
             lugar = v.findViewById(R.id.lugar);
-
-
         }
     }
 
@@ -87,8 +85,7 @@ class AdapterPartidos extends RecyclerView.Adapter<AdapterPartidos.ElementoTabla
     // Create new views (invoked by the layout manager)
     @Override
     // crea la vista
-    public AdapterPartidos.ElementoTabla onCreateViewHolder(ViewGroup parent,
-                                                            int viewType) {
+    public AdapterPartidos.ElementoTabla onCreateViewHolder(ViewGroup parent,int viewType) {
         // create a new view
         View v = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.elemento_programacion, parent, false);
