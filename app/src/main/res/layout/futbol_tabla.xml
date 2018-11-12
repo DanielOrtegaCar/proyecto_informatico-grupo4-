@@ -6,7 +6,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragmentos.Futbol.Tab_Tabla_Futbol">
 
-
     <android.support.v7.widget.RecyclerView
         android:id="@+id/lista_puntuacion"
         android:layout_width="match_parent"
