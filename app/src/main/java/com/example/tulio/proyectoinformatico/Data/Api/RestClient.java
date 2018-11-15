@@ -16,6 +16,17 @@ import retrofit2.Call;
 import retrofit2.http.GET;
 
 
+
+
+/*
+*  Clase que define los metodos get y post del webservice, para este proyecto solo se ocupan metodos get
+*  ya que principalmente queremos obtener informacion del webservice.
+*  Ademas de la peticion de informacion, la informacion obtenida es mapeada a un objeto que tiene el modelo
+*  de la respuesta obtenida en json, para poder ser utilizado, si se obtiene mas de un objeto por respuesta esto debe ser una lista
+*
+*
+* */
+
 public interface RestClient {
 
     //listos
@@ -25,8 +36,12 @@ public interface RestClient {
     //ocupado en inicio -> programacion
     @GET("/fechas_partidos/{id}")
     Call<List<FechaPartido>> getTabla_partidos(@retrofit2.http.Path("id") int id);
+    
+    @GET("/login/{id}")
+    Call<List<Login>> getUser(@retrofit2.http.Path("id") int id);
 
-
+    @GET("/noticias")
+    Call<List<Noticias>> getNoticias();
     //faltantes
     @GET("/tabla_goleador/{id}")
     Call<List<TablaGoleador>> getTabla_goleador(@retrofit2.http.Path("id") int id);
@@ -39,12 +54,6 @@ public interface RestClient {
 
     @GET("/reglamento/{id}")
     Call<List<Reglamento>> getReglamento(@retrofit2.http.Path("id") int id);
-
-    @GET("/noticias")
-    Call<List<Noticias>> getNoticias();
-
-    @GET("/login/{id}")
-    Call<List<Login>> getUser(@retrofit2.http.Path("id") int id);
 
     @GET("/proximos")
     Call<List<ProximosPartido>> getProximos();

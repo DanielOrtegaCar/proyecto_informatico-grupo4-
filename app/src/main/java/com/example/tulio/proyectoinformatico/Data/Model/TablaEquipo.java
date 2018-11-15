@@ -1,6 +1,11 @@
 package com.example.tulio.proyectoinformatico.Data.Model;
 
 
+/*
+Corresponde al modelo con el que se obtendra la informacion obtenida por el json
+correspondiente a la consulta de la tabla equipo
+*/
+
 public class TablaEquipo {
 
     private String nombre;

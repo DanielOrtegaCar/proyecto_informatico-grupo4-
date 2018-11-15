@@ -13,6 +13,16 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+/*
+ * Clase que define los metodos a utilizar por el webservice, donde ademas se define la ruta de conexion,
+ * para ir a buscar la informacion
+ *
+ *
+ *
+ *
+ * */
+
+
 public class RetrofitUtils {
     public static Retrofit getInstance() {
         Gson gson = new GsonBuilder()

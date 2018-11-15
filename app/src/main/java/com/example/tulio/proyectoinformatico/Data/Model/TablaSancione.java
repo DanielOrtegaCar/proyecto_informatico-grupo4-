@@ -2,6 +2,11 @@
 package com.example.tulio.proyectoinformatico.Data.Model;
 
 
+/*
+Corresponde al modelo con el que se obtendra la informacion obtenida por el json
+correspondiente a la consulta de la tabla sanciones
+*/
+
 public class TablaSancione {
 
     private String jugador;

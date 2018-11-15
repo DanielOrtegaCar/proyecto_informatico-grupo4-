@@ -14,6 +14,11 @@ import com.example.tulio.proyectoinformatico.Fragmentos.Basquet.pestanas_basquet
 import com.example.tulio.proyectoinformatico.Fragmentos.Futbol.pestanas_futbol;
 import com.example.tulio.proyectoinformatico.Fragmentos.Inicio.pestanas_inicio;
 
+
+/*
+corresponde a la pantalla principal de la aplicacion
+ */
+
 public class home extends AppCompatActivity {
 
     private TextView mTextMessage;

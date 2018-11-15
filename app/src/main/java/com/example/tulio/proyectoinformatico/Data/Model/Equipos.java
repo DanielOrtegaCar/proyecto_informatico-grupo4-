@@ -4,6 +4,12 @@ package com.example.tulio.proyectoinformatico.Data.Model;
  *
  * Daniel Ortega Carcamo
  */
+
+/*
+Corresponde al modelo con el que se obtendra la informacion obtenida por el json
+correspondiente a la consulta de Equipos
+*/
+
 public class Equipos {
 
     private String facultad;

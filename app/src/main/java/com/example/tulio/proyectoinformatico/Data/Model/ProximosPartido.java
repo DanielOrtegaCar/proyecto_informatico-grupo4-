@@ -1,6 +1,12 @@
 package com.example.tulio.proyectoinformatico.Data.Model;
 
 
+/*
+Corresponde al modelo con el que se obtendra la informacion obtenida por el json
+correspondiente a la consulta de los proximos partidos
+*/
+
+
 public class ProximosPartido {
 
     private String deporte;

@@ -2,6 +2,12 @@
 package com.example.tulio.proyectoinformatico.Data.Model;
 
 
+/*
+Corresponde al modelo con el que se obtendra la informacion obtenida por el json
+correspondiente a la consulta del reglamento
+*/
+
+
 public class Reglamento {
 
     private String nombre;
