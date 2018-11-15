@@ -2,7 +2,9 @@ package com.example.tulio.proyectoinformatico.Data.Api;
 
 import com.example.tulio.proyectoinformatico.Data.Model.Equipos;
 import com.example.tulio.proyectoinformatico.Data.Model.FechaPartido;
+import com.example.tulio.proyectoinformatico.Data.Model.Login;
 import com.example.tulio.proyectoinformatico.Data.Model.Noticias;
+import com.example.tulio.proyectoinformatico.Data.Model.ProximosPartido;
 import com.example.tulio.proyectoinformatico.Data.Model.Reglamento;
 import com.example.tulio.proyectoinformatico.Data.Model.TablaEquipo;
 import com.example.tulio.proyectoinformatico.Data.Model.TablaGoleador;
@@ -40,6 +42,12 @@ public interface RestClient {
 
     @GET("/noticias")
     Call<List<Noticias>> getNoticias();
+
+    @GET("/login/{id}")
+    Call<List<Login>> getUser(@retrofit2.http.Path("id") int id);
+
+    @GET("/proximos")
+    Call<List<ProximosPartido>> getProximos();
 
 
 

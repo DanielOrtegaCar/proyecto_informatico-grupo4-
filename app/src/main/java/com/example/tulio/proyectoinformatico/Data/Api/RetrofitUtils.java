@@ -25,7 +25,8 @@ public class RetrofitUtils {
                 .build();
         return new Retrofit.Builder()
                 .client(okHttpClient)
-                .baseUrl("http://10.0.2.2:8000")
+                .baseUrl("http://proyectoinfor.000webhostapp.com")
+                //.baseUrl("http://10.0.2.2:8000")
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
     }
