@@ -8,7 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.tulio.proyectoinformatico.Data.TabViewPagerAdapter;
+import com.example.tulio.proyectoinformatico.Adaptadores.TabViewPagerAdapter;
 import com.example.tulio.proyectoinformatico.R;
 
 public class pestanas_basquet extends Fragment {
@@ -39,8 +39,8 @@ public class pestanas_basquet extends Fragment {
 
         adapter.addFragment(new Tab_Tabla_Basquet(), "Tabla");
         adapter.addFragment(new Tab_Programacion_Basquet(), "Programacion");
-        adapter.addFragment(new Tab_Estadisticas_Basquet(), "Estadisticas");
-        adapter.addFragment(new Tab_Reglamento_Basquet(), "Reglamento");
+        adapter.addFragment(new Tab_Sancionados_Basquet(), "Sancionados");
+        adapter.addFragment(new Tab_Goleadores_Basquet(), "Goleadores");
 
         viewPager.setAdapter(adapter);
         return viewPager;

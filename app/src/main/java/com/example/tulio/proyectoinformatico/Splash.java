@@ -8,10 +8,6 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
-/*
-para darle el efecto splash a la pantalla de inicio de la aplicacion
- */
-
 public class Splash extends AppCompatActivity {
 
     private static int SPLASH_TIME_OUT= 4000;

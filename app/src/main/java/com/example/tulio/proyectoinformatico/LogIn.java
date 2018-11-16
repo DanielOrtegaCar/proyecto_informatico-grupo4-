@@ -21,10 +21,6 @@ import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-
-/*
-Formulario de login de la aplicacion
- */
 public class LogIn extends AppCompatActivity {
 
     Button btnconsultar, btnRegistrarse, btnIngresar;

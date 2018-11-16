@@ -1,25 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Fragmentos.Basquet.Tab_Tabla_Basquet">
 
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/lista_puntuacion"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbars="horizontal" android:id="@+id/ScrollView">
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    </android.support.v7.widget.RecyclerView>
+        <TextView
+            android:id="@+id/nombre_tabla"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="34dp"
+            android:text="1°División"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/tabla_titulos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/recyvleVieTabla"
+            android:layout_marginBottom="-42dp"
+            android:text="Club                      PJ     G     P     DG"
+            android:textSize="20sp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyvleVieTabla"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nombre_tabla"
+            android:layout_marginTop="85dp" />
+
+
+        <TextView
+            android:id="@+id/nombre_tabla2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="34dp"
+            android:text="2°División"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tabla_titulos2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/recyvleVieTabla"
+            android:layout_marginBottom="-42dp"
+            android:text="Club                      PJ     G     P     DG"
+            android:textSize="20sp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyvleVieTablaseg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nombre_tabla"
+            android:layout_marginTop="85dp" />
+
+
+        <TextView
+            android:id="@+id/nombre_tabla3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="34dp"
+            android:text="3°División"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tabla_titulos3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/recyvleVieTabla"
+            android:layout_marginBottom="-42dp"
+            android:text="Club                      PJ     G     P     DG"
+            android:textSize="20sp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyvleVieTablater"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nombre_tabla"
+            android:layout_marginTop="85dp" />
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>

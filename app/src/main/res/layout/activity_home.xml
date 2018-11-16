@@ -8,13 +8,6 @@
     tools:context=".home">
 
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </android.support.v7.widget.RecyclerView>
-
-
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"
         android:layout_width="match_parent"
@@ -32,7 +25,7 @@
     <FrameLayout
         android:id="@+id/cont_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_alignTop="@id/navigation"
         android:layout_alignBottom="@+id/navigation"
         android:layout_alignParentTop="true"

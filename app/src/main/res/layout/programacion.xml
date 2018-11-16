@@ -7,11 +7,10 @@
     tools:context=".Fragmentos.Inicio.Tab_Programacion">
 
 
-
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/lista_partido"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/fechasbd"
+        android:layout_width="262dp"
+        android:layout_height="405dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"

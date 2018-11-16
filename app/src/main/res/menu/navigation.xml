@@ -8,16 +8,20 @@
 
     <item
         android:id="@+id/navigation_dashboard"
-        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:icon="@drawable/iconfutbol"
         android:title="Futbol" />
 
     <item
         android:id="@+id/navigation_notifications"
-        android:icon="@drawable/ic_notifications_black_24dp"
+        android:icon="@android:drawable/ic_notification_overlay"
         android:title="Basquetbol" />
     <item
         android:id="@+id/nav_usuario"
         android:icon="@drawable/usuario"
         android:title="Usuario" />
+    <item
+        android:id="@+id/navigation_reglamento"
+        android:icon="@android:drawable/ic_menu_help"
+        android:title="reglamento" />
 
 </menu>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbars="horizontal" android:id="@+id/ScrollView">
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/nombre_tabla"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="34dp"
+            android:text="Sancionados 1° División"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyvleVieSan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nombre_tabla"
+            android:layout_marginTop="20dp" />
+
+
+        <TextView
+            android:id="@+id/nombre_tabla2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="34dp"
+            android:text="Sancionados 2°División"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyvleVieSanseg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nombre_tabla"
+            android:layout_marginTop="20dp" />
+
+
+        <TextView
+            android:id="@+id/nombre_tabla3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="34dp"
+            android:text="Sancionados Champions Ing"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyvleVieSanchamp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nombre_tabla"
+            android:layout_marginTop="20dp" />
+
+
+
+
+    </LinearLayout>
+</ScrollView>

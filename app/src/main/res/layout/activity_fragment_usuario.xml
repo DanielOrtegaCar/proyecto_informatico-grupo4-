@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Algo">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1000"
+        android:background="@color/azulclarito"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="match_parent"
+            android:layout_height="98dp"
+            android:layout_gravity="center"
+            android:background="@color/amarillito"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            tools:src="@tools:sample/avatars[8]" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingTop="4dp"
+            android:text="Mi Perfil"
+            android:textColor="@color/azulito"
+            android:textStyle="bold" />
+
+        <CheckedTextView
+            android:id="@+id/checkedTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:text="Equipos"
+            android:textColor="@color/azulito"
+            android:textColorLink="@color/azulito"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/LH1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:layout_weight="4.8"
+            android:orientation="horizontal"
+            android:paddingTop="20dp">
+
+            <Button
+                android:id="@+id/equipo2"
+                android:layout_width="192dp"
+                android:layout_height="wrap_content"
+                android:background="@color/blanco"
+                android:text="Ingeniería 85"
+                android:textColor="@color/azulito"
+                android:textColorLink="@color/amarillito" />
+
+            <Button
+                android:id="@+id/ir_equipo2"
+                android:layout_width="192dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/blanco"
+                android:text="                           >"
+                android:textColor="@color/azulito"
+                android:textColorLink="@color/amarillito" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LH2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="top"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:paddingTop="207dp">
+
+        <Button
+            android:id="@+id/equipo1"
+            android:layout_width="192dp"
+            android:layout_height="wrap_content"
+            android:background="@color/blanco"
+            android:text="Informática"
+            android:textColor="@color/azulito"
+            android:textColorLink="@color/amarillito" />
+
+        <Button
+            android:id="@+id/ir_equipo1"
+            android:layout_width="192dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/blanco"
+            android:text="                           >"
+            android:textColor="@color/azulito"
+            android:textColorLink="@color/amarillito" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LH3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingTop="280dp">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:paddingLeft="10dp"
+            android:paddingTop="4dp"
+            android:text="Generales"
+            android:textColor="@color/azulito"
+            android:textStyle="bold"
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LH4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingTop="80dp">
+
+        <Switch
+            android:id="@+id/switch3"
+
+
+            android:layout_width="306dp"
+            android:layout_height="41dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/blanco"
+            android:checked="true"
+            android:paddingLeft="100dp"
+            android:paddingRight="100dp"
+            android:shadowColor="@color/amarillito"
+            android:text="Notificaciones"
+            android:textColor="@color/azulito"
+            android:textColorHighlight="@color/amarillito"
+            android:textColorHint="@color/amarillito"
+            android:textColorLink="@color/amarillito"
+            android:textStyle="bold"
+            tools:checked="false" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LH5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingTop="280dp">
+
+        <TextView
+            android:id="@+id/enunciado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingTop="4dp"
+            android:text="Puedes editar las notificaciones de la aplicación, en los ajustes de tu teléfono"
+            android:textColor="@color/design_default_color_primary"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingTop="450dp">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/blanco"
+            android:text="VOLVER"
+            android:textColor="@color/azulito" />
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Proyecto Informatico</string>
+    <string name="app_name">Deportes Udec</string>
     <string name="title_activity_basquet_activity">basquet_activity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -22,5 +22,4 @@
     <string name="tab_text_4">Estadisticas</string>
     <string name="tab_text_5">Tabla</string>
     <string name="tab_text_6">Reglamento</string>
-    <string name="textview">TextView</string>
 </resources>

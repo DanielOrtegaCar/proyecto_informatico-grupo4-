@@ -14,11 +14,6 @@ import com.example.tulio.proyectoinformatico.Fragmentos.Basquet.pestanas_basquet
 import com.example.tulio.proyectoinformatico.Fragmentos.Futbol.pestanas_futbol;
 import com.example.tulio.proyectoinformatico.Fragmentos.Inicio.pestanas_inicio;
 
-
-/*
-corresponde a la pantalla principal de la aplicacion
- */
-
 public class home extends AppCompatActivity {
 
     private TextView mTextMessage;
@@ -29,7 +24,7 @@ public class home extends AppCompatActivity {
     private Algo algo;
     private pestanas_basquet basquet;
     private pestanas_futbol futbol;
-
+    private Reglamentos reglamentos;
 
 
 
@@ -39,22 +34,19 @@ public class home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-
-
         //mTextMessage = (TextView) findViewById(R.id.message);
         navigation = (BottomNavigationView) findViewById(R.id.navigation);
         //navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-
         frameLayout= (FrameLayout) findViewById(R.id.cont_layout);
         home= new pestanas_inicio();
         futbol= new pestanas_futbol();
         basquet= new pestanas_basquet();
         algo= new Algo();
+        reglamentos = new Reglamentos();
 
 
 
 
-        // barra de navegacion, inferior
         mOnNavigationItemSelectedListener= new BottomNavigationView.OnNavigationItemSelectedListener() {
 
             @Override
@@ -78,6 +70,13 @@ public class home extends AppCompatActivity {
                         setFragment(algo);
 
                         return true;
+
+                    case R.id.navigation_reglamento:
+                        setFragment(reglamentos);
+
+                        return true;
+
+
                 }
                 return false;
             }

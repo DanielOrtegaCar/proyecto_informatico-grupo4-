@@ -1,123 +1,120 @@
 package com.example.tulio.proyectoinformatico.Fragmentos.Basquet;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.Button;
 
-import com.example.tulio.proyectoinformatico.Data.Api.RestClient;
-import com.example.tulio.proyectoinformatico.Data.Api.RetrofitUtils;
-import com.example.tulio.proyectoinformatico.Data.Model.TablaEquipo;
+import com.example.tulio.proyectoinformatico.Adaptadores.NoticiaAdapter;
+import com.example.tulio.proyectoinformatico.Adaptadores.TablaAdapter;
+import com.example.tulio.proyectoinformatico.IO.PruebaApiAdapter;
+import com.example.tulio.proyectoinformatico.Model.Noticia;
+import com.example.tulio.proyectoinformatico.Model.TablaPos;
 import com.example.tulio.proyectoinformatico.R;
 
-import java.util.List;
+import java.util.ArrayList;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class Tab_Tabla_Basquet extends Fragment {
 
-    //generico
-    private RecyclerView mRecyclerView;
-    private RecyclerView.Adapter mAdapter;
-    private RecyclerView.LayoutManager mLayoutManager;
+public class Tab_Tabla_Basquet  extends Fragment implements Callback<ArrayList<TablaPos>> {
+
+
+    private RecyclerView primeradiv,segundadiv,terdiv;
+    private TablaAdapter pd, sd, ter;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle bundle){
         View rootView= inflater.inflate(R.layout.basquet_tabla, container, false);
 
-
-        //copiar
-        mRecyclerView = rootView.findViewById(R.id.lista_puntuacion); // cambiar id reciccler view R.id.lista
-        mRecyclerView.setHasFixedSize(true);
-        mLayoutManager = new LinearLayoutManager(this.getContext());
-        mRecyclerView.setLayoutManager(mLayoutManager);
+        primeradiv = (RecyclerView) rootView.findViewById(R.id.recyvleVieTabla);
+        segundadiv = (RecyclerView) rootView.findViewById(R.id.recyvleVieTablaseg);
+        terdiv = (RecyclerView) rootView.findViewById(R.id.recyvleVieTablater);
 
 
-        RestClient client = RetrofitUtils.getInstance().create(RestClient.class);
-        Call<List<TablaEquipo>> call = client.getTabla_equipos(3); // cambiar List<Equipos> acomoodar con modelo que quiero llamar
-        call.enqueue(new Callback<List<TablaEquipo>>() {
+        primeradiv.setLayoutManager(new LinearLayoutManager(getActivity()));
+        segundadiv.setLayoutManager(new LinearLayoutManager(getActivity()));
+        terdiv.setLayoutManager(new LinearLayoutManager(getActivity()));
+
+        pd = new TablaAdapter();
+        sd = new TablaAdapter();
+        ter = new TablaAdapter();
+
+        primeradiv.setAdapter(pd);
+        segundadiv.setAdapter(sd);
+        terdiv.setAdapter(ter);
+
+        Call<ArrayList<TablaPos>> call = PruebaApiAdapter.getApiService().getTabla1DivBasquet();
+        Call<ArrayList<TablaPos>> calld = PruebaApiAdapter.getApiService().getTabla2DivBasquet();
+        Call<ArrayList<TablaPos>> callt = PruebaApiAdapter.getApiService().getTabla3DivBasquet();
+
+        call.enqueue(new Callback<ArrayList<TablaPos>>() {
             @Override
-            public void onResponse(Call<List<TablaEquipo>> call, Response<List<TablaEquipo>> response) {
-                TablaEquipo[] tabla = new TablaEquipo[response.body().size()];
-                mAdapter = new AdapterPosiciones(response.body().toArray(tabla));
-                mRecyclerView.setAdapter(mAdapter);
-
+            public void onResponse(Call<ArrayList<TablaPos>> call, Response<ArrayList<TablaPos>> response) {
+                if (response.isSuccessful()){
+                    ArrayList<TablaPos> respuesta = response.body();
+                    Log.d("Respuesta de bd", "tamaño del arreglo =>" + respuesta.size());
+                    pd.setmDataSet(respuesta);
+                }
             }
 
             @Override
-            public void onFailure(Call<List<TablaEquipo>> call, Throwable t) {
-
+            public void onFailure(Call<ArrayList<TablaPos>> call, Throwable t) {
+                Log.i("ERRRORRRRR!!!",t.getMessage());
             }
         });
+
+
+        calld.enqueue(new Callback<ArrayList<TablaPos>>() {
+            @Override
+            public void onResponse(Call<ArrayList<TablaPos>> call, Response<ArrayList<TablaPos>> response) {
+                ArrayList<TablaPos> respuesta2 = response.body();
+                Log.d("Respuesta de bd", "tamaño del arreglo =>" + respuesta2.size());
+                sd.setmDataSet(respuesta2);
+            }
+
+            @Override
+            public void onFailure(Call<ArrayList<TablaPos>> call, Throwable t) {
+                Log.i("ERRRORRRRR!!!",t.getMessage());
+            }
+        });
+
+
+        callt.enqueue(new Callback<ArrayList<TablaPos>>() {
+            @Override
+            public void onResponse(Call<ArrayList<TablaPos>> call, Response<ArrayList<TablaPos>> response) {
+                ArrayList<TablaPos> respuesta3 = response.body();
+                Log.d("Respuesta de bd", "tamaño del arreglo =>" + respuesta3.size());
+                ter.setmDataSet(respuesta3);
+            }
+
+            @Override
+            public void onFailure(Call<ArrayList<TablaPos>> call, Throwable t) {
+                Log.i("ERRRORRRRR!!!",t.getMessage());
+            }
+        });
+
         return rootView;
     }
+
+
+
+    @Override
+    public void onResponse(Call<ArrayList<TablaPos>> call, Response<ArrayList<TablaPos>> response) {
+
+    }
+
+    @Override
+    public void onFailure(Call<ArrayList<TablaPos>> call, Throwable t) {
+
+    }
 }
 
-class AdapterPosiciones extends RecyclerView.Adapter<AdapterPosiciones.ElementoTabla> {
-    private TablaEquipo[] mDataset;
-
-    // Provide a reference to the views for each data item
-    // Complex data items may need more than one view per item, and
-    // you provide access to all the views for a data item in a view holder
-    public static class ElementoTabla extends RecyclerView.ViewHolder {
-        // each data item is just a string in this case
-
-        public TextView equipo, pJ, pG, pP, gF, gC, diff; //para el layout de un elemento
-        public ElementoTabla(View v) {
-            super(v);
-            equipo = v.findViewById(R.id.Equipo);
-            pJ = v.findViewById(R.id.PJ);
-            pG = v.findViewById(R.id.PG);
-            pP = v.findViewById(R.id.PP);
-            gF = v.findViewById(R.id.GF);
-            gC = v.findViewById(R.id.GC);
-            diff= v.findViewById(R.id.Diff);
-
-        }
-    }
-
-    // Provide a suitable constructor (depends on the kind of dataset)
-    public AdapterPosiciones(TablaEquipo[] myDataset) {
-        mDataset = myDataset;
-    }
-
-    // Create new views (invoked by the layout manager)
-    @Override
-    // crea la vista
-    public AdapterPosiciones.ElementoTabla onCreateViewHolder(ViewGroup parent,
-                                                              int viewType) {
-        // create a new view
-        View v = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.tabla_puntuacion_row, parent, false);
-
-        ElementoTabla vh = new ElementoTabla(v);
-        return vh;
-    }
-
-    // Replace the contents of a view (invoked by the layout manager)
-    @Override
-    // rellena la vista con los datos del elemento en la posicion del arreglo
-    public void onBindViewHolder(ElementoTabla holder, int position) {
-        // - get element from your dataset at this position
-        // - replace the contents of the view with that element
-        holder.equipo.setText(mDataset[position].getEquipo());
-        holder.pP.setText(mDataset[position].getPp());
-        holder.pG.setText(mDataset[position].getPg());
-        holder.pJ.setText(mDataset[position].getPj());
-        holder.gC.setText(mDataset[position].getGc());
-        holder.gF.setText(mDataset[position].getGf());
-        holder.diff.setText(mDataset[position].getDifgoles());
-
-
-    }
-
-    // Return the size of your dataset (invoked by the layout manager)
-    @Override
-    public int getItemCount() {
-        return mDataset.length;
-    }
-}

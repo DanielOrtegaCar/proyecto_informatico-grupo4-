@@ -1,22 +1,20 @@
 package com.example.tulio.proyectoinformatico.Fragmentos.Inicio;
 
-import android.os.Bundle;
 import android.support.design.widget.TabLayout;
+
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.tulio.proyectoinformatico.Data.TabViewPagerAdapter;
+import com.example.tulio.proyectoinformatico.Adaptadores.TabViewPagerAdapter;
+
 import com.example.tulio.proyectoinformatico.R;
 
 public class pestanas_inicio extends Fragment {
-
-
-
-
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -40,8 +38,6 @@ public class pestanas_inicio extends Fragment {
         View rootView= inflater.inflate(R.layout.activity_pestanas_inicio, container, false);
         setHasOptionsMenu(true);
 
-
-
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) rootView.findViewById(R.id.container);
 
@@ -55,14 +51,13 @@ public class pestanas_inicio extends Fragment {
         return rootView;
     }
 
-    // barra superior
     private View setupViewPage(ViewPager viewPager) {
         TabViewPagerAdapter adapter= new TabViewPagerAdapter(getChildFragmentManager());
         adapter.addFragment(new Tab_Noticias(), "Noticias");
         adapter.addFragment(new Tab_Programacion(), "Programacion");
-        adapter.addFragment(new Tab_Suscritos(), "Suscritos");
         viewPager.setAdapter(adapter);
         return viewPager;
+
     }
 
 
