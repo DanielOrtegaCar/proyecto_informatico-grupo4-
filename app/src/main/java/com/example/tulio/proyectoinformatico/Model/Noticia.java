@@ -1,5 +1,6 @@
 package com.example.tulio.proyectoinformatico.Model;
 
+// asdasd
 public class Noticia {
 
     private String titulo;
