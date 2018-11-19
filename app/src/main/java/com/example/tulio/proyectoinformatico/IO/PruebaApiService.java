@@ -94,4 +94,7 @@ public interface PruebaApiService {
     @GET("tabla_goleador/6")
     Call<ArrayList<Goleadores>> getTablaGoleadores1Champ();
 
+
+
+
 }
